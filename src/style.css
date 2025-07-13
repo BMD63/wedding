@@ -6,16 +6,18 @@
   font-display: swap; 
 }
 @font-face {
-  font-family: 'anastasia';
-  src: url(../fonts/ofont.ru_Anastasia.ttf);
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; 
+ font-family: 'anastasia';
+ src: url('../fonts/ofont.ru_Anastasia.woff') format('woff'),
+  url('../fonts/ofont.ru_Anastasia.otf') format('opentype');
+ font-weight: normal;
+ font-style: normal;
+ font-display: swap;
 }
 
 :root {
   font-family: cinzel, serif;
-  line-height: 1.5;
+  font-size: 4.6vw;
+  line-height: 10.2vw;
   font-weight: 400;
   text-align: center;
 }
