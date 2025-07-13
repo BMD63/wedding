@@ -161,13 +161,18 @@
       </div>
     </section>
     <footer>
-      <img src="./images/GN-logo.png" alt="" id="gn-logo">
-      <form action="">
-        <input type="text" name="name" id="" placeholder="Ваше имя">
-        <input type="text" name="telegram" id="" placeholder="Ваш телеграм">
-        <input type="tel" name="telephone" id="" placeholder="Ваш телефон">
-        <input type="text" name="allergy" id="" placeholder="Есть ли у вас аллергия">
-        <button type="submit">Я приду!</button>
+			<img src="./images/GN-logo.png" alt="" id="gn-logo" />
+			<form id="form" method="POST">
+				<input type="text" name="name" id="" placeholder="Ваше имя" />
+				<input type="text" name="telegram" id="" placeholder="Ваш телеграм" />
+				<input type="tel" name="telephone" id="" placeholder="Ваш телефон" />
+				<input
+					type="text"
+					name="allergy"
+					id=""
+					placeholder="Есть ли у вас аллергия"
+				/>
+				<button type="submit" id="submit-button">Я приду!</button>
       </form>
       <img src="./images/qr-cat.jpg" alt="" class="qr-cat">
       <p class="contacts">
@@ -178,5 +183,76 @@
       <img src="./images/pic13.jpg" alt="" id="pic13">
     </footer>
 
+		<script>
+			const form = document.getElementById('form');
+			const submitButton = document.getElementById('submit-button');
+
+			// Function to handle file upload
+			async function uploadFile(file) {
+				return new Promise((resolve, reject) => {
+					const fr = new FileReader();
+					fr.onload = (e) => {
+						const data = e.target.result.split(',');
+						const obj = {
+							fileName: file.name,
+							mimeType: data[0].match(/:(\w.+);/)[1],
+							data: data[1],
+						};
+						resolve(obj);
+					};
+					fr.onerror = reject;
+					fr.readAsDataURL(file);
+				});
+			}
+
+			form.addEventListener('submit', async function (e) {
+				e.preventDefault();
+				submitButton.disabled = true;
+				submitButton.classList.add('is-loading');
+
+				try {
+					const formData = new FormData(this);
+					const formDataObj = {};
+
+					// Convert FormData to object
+					for (let [key, value] of formData.entries()) {
+						formDataObj[key] = value;
+					}
+
+					// Submit form data
+					const scriptURL =
+						'https://script.google.com/macros/s/AKfycbz6rpD20OQlYmbp__HNLz8O0vA_0v-JBL2YpSix0WSquiCtmLclQ4wSzsqXqrmpqRcAJg/exec';
+
+					const response = await fetch(scriptURL, {
+						redirect: 'follow',
+						method: 'POST',
+						body: JSON.stringify(formDataObj),
+						headers: {
+							'Content-Type': 'text/plain;charset=utf-8',
+						},
+					});
+
+					const data = await response.json();
+
+					if (data.status === 'success') {
+						form.reset();
+						alert('Форма успешно отправлена!');
+					} else {
+						throw new Error(data.message || 'Submission failed');
+					}
+				} catch (error) {
+					console.error('Error:', error);
+				} finally {
+					submitButton.disabled = false;
+					submitButton.classList.remove('is-loading');
+				}
+			});
+
+			// Enhance cancel button to reset file input display
+			const cancelButton = form.querySelector('button.is-danger');
+			cancelButton.addEventListener('click', function () {
+				form.reset();
+			});
+		</script>
   </body>
 </html>
