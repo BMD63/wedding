@@ -1,96 +1,174 @@
+@font-face {
+  font-family: 'cinzel';
+  src: url(../fonts/cinzel_regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+@font-face {
+  font-family: 'anastasia';
+  src: url(../fonts/ofont.ru_Anastasia.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: cinzel, serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+header{
+  width: 100%;
+  height:100vh;
+  background-image: url('../pic1.jpg');
+  background-size: 350%;
+  background-position: center 20%;
+  color: #faf7f4;
+  position: relative;
+}
+#devise{
+  color: #FAF7F4;
+  font-family: cinzel;
+  font-size: 7.7vw;
+  padding-top: 8vw;
+  
+}
+header h1{
+  font-size: 14vw;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+header h2{
+  margin-top: 0;
+  font-family: 'anastasia';
+  font-size: 11.5vw ;
+}
+.header-bottom-block{
+position: absolute;
+bottom: 0%;
+}
+.firstIntroBlock{
+  background-color: rgba(143, 169, 140, 0.25);
+  border-radius: 150vw 150vw 0 0 
+}
+.love-elegance{
+  list-style: none;
+  padding: 0;
+  color: #1E3B22;
+  font-family: anastasia;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.firstPicBlock{
+  position: relative;
+  width: 100%;
+  height: 180vw;
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+#pic2, #pic3, #pic4, #pic5, #pic8, #pic9, #pic11, #pic12{
+  width: 60%;
+  border: 4vw solid white;
+  border-radius: 5px;
+  position: absolute;
 }
-
-.card {
-  padding: 2em;
+#pic2, #pic4, #pic8, #pic11{
+  transform: rotate(-7deg);
+  left:5%;
+  top:5%;
 }
-
-.read-the-docs {
-  color: #888;
+#pic3, #pic5, #pic9, #pic12{
+  transform:rotate(7deg);
+  bottom:5%;
+  right:6%
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.secondPicBlock{
+  position: relative;
+  width: 100%;
+  height: 105vw;
+  background-color: #8fa98c;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.colors-block{
+  display: flex;
+  width: 93%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.color{
+  width: 13vw;
+  height: 13vw;
+  border-radius: 50%;
+}
+#color1{
+  background: #D3B694;
+}
+#color2{
+  background: #D6A19B;
+}
+#color3{
+  background: #7E242D;
+}
+#color4{
+  background: #5C331D;
+}
+#color5{
+  background: #56775A;
+}
+#color6{
+  background: #8FA98C;
+}
+.rulesPicBlock{
+  position: relative;
+  width: 100%;
+  height: 110vw;
+  background-color: #8fa98c;
+}
+.rulesPicBlock img{
+  width: 42% !important;
+}
+.InvitationPicBlock{
+  position: relative;
+  width: 100%;
+  height: 110vw;
+  background-color: #8fa98c;
+
+}
+
+.olive{
+  width: 25vw;
+}
+#pic10, #pic13{
+  width: 100%;
+  height: auto;
+}
+.qr-cat{
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#gn-logo{
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+justify-content: center;
+width: 87%;
+margin: 0 auto;
+}
+form input, form button {
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #8fa98c;
+  color: #8fa98c;
+  text-align: center;
+}
+form button {
+  background-color: #8fa98c;
+  color: white;
 }

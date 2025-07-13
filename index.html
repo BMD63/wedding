@@ -2,15 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/style.css">
     <link rel="icon" type="image/svg+xml" href="/GN.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wedding</title>
   </head>
   <body>
     <header>
-      <h2>save the date</h2>
-      <h1>ГРИГОРИЙ & НАТАЛЬЯ</h1>
-      <h2>09 / 08 / 2025</h2>
+      <h2 id="devise">SAVE THE DATE</h2>
+      <div class="header-bottom-block">
+        <h1>ГРИГОРИЙ & НАТАЛЬЯ</h1>
+        <h2 id="date">09 / 08 / 2025</h2>
+      </div>
     </header>
     <section id = "intro">
       <p class="mainText">
@@ -21,16 +24,19 @@
         — ваше присутствие сделает наш праздник по-настоящему совершенным.
       </p>
       <div class="firstIntroBlock">
-        <p>
-          Любовь.Элегантность.Вечность.Начало.
-        </p>
+        <ul class="love-elegance">
+          <li>Любовь</li>
+          <li>Элегантность</li>
+          <li>Вечность</li>
+          <li>Начало</li>
+        </ul>
         <div class="firstPicBlock">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="pic2.png" alt="" id="pic2">
+          <img src="pic3.jpg" alt="" id="pic3">
         </div>
       </div>
       <div class="secondIntroBlock">
-        <p>
+        <p class="mainText">
           Для нас <strong>9 августа 2025 года </strong>
           — не просто дата в календаре.
           
@@ -42,26 +48,34 @@
           и поддержка наполнят этот день особым, неповторимым светом.
         </p>
         <div class="secondPicBlock">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="pic4.jpg" alt="" id="pic4">
+          <img src="pic5.jpg" alt="" id="pic5">
         </div>
       </div>
     </section>
     <section class="rules">
       <div class="dressCode">
         <h2>Дресс-код</h2>
-        <p>
+        <p class="mainText">
           Стремясь к гармонии и изысканности общего вида нашего торжества, а также для 
           создания безупречных фотографий на память, мы будем вам крайне признательны, 
           если вы будете придерживаться следующего дресс-кода:
         </p>
+        <div class="colors-block">
+          <div class="color" id="color1"></div>
+          <div class="color" id="color2"></div>
+          <div class="color" id="color3"></div>
+          <div class="color" id="color4"></div>
+          <div class="color" id="color5"></div>
+          <div class="color" id="color6"></div>
+        </div>
         <div class="colors">
           <h3>Для дам:</h3>
           <p>
             Вечерние наряды в сдержанной палитре (пожалуйста, воздержитесь 
             от белого, молочного и цветов, близкиx к ним).
           </p>
-          <h3>Для джентльменов: </h3>
+          <h3>Для джентльменов:</h3>
           <p>
             хорошо подойдет классический вариант — сочетание рубашки 
             и брюк.
@@ -70,8 +84,8 @@
             Ваша элегантность станет неотъемлемой частью красоты этого вечера.
           </p>
           <div class="rulesPicBlock">
-            <img src="" alt="">
-            <img src="" alt="">
+            <img src="pic8.jpg" alt="" id="pic8">
+            <img src="pic9.jpg" alt="" id="pic9">
           </div>
         </div>
       </div>
@@ -83,15 +97,15 @@
           От всего сердца просим вас воздержаться от традиционных выкриков "Горько!". 
           Давайте вместе сохраним изысканность и очарование этого вечера для теплых, искренних бесед и танцев.
         </p>
-        <h3>О подарках: </h3>
+        <h3>О подарках:</h3>
         <p>
           Ваше присутствие и теплые пожелания — самый дорогой для нас дар! Чтобы избавить вас от хлопот с выбором, 
           будем искренне признательны за ваше поздравление в конверте. Для тех, кто желает 
           преподнести именной подарок, мы составили виш-лист с пожеланиями для нашего совместного будущего. 
           Для вашего удобства и чтобы избежать совпадений, а также сохранить элемент сюрприза, 
-          актуальный список подарков будет находиться у наших близких друзей: Анна +7 937 646 3339  Дмитрий +7 937 791 0321
+          актуальный список подарков будет находиться у наших близких друзей: Анна +7 937 646 3339 Дмитрий +7 937 791 0321
         </p>
-        <h3>Творческие поздравления: </h3>
+        <h3>Творческие поздравления:</h3>
         <p>
           Если ваше сердце подсказывает подготовить творческое поздравление 
           (танец, песня, теплые слова в особой форме), мы будем тронуты! 
@@ -99,57 +113,69 @@
           +7 927 265 5896 Роман
         </p>
       </div>
-      <img src="" alt="">
+            <img src="vetko.png" alt="ветка оливы" class="olive">
     </section>
     <section class="details">
       <div class="shedule">
         <h2>О времени и церемонии:</h2>
-        <p>
+        <p class="mainText">
           Драгоценные минуты выездной церемонии бракосочетания начнутся <strong>ровно в 16:00 </strong>в уютном уголке парка. 
           Учитывая особенности пространства, <strong>любезно просим вас принять
           во внимание</strong>, что не все гости смогут разместиться на самой церемонии комфортно.
         </p>
         <h3>Если ваше сердце стремится быть рядом в этот особый момент:</h3>
-        <p>
+        <p class="mainText">
           будем искренне рады видеть вас <strong>к 15:30 </strong>– возможно, нам придется немного потесниться, но ваша поддержка будет бесценна.
         </p>
         <h3>
           Если вы предпочтете присоединиться к празднованию позже:</h3>
-          <p>
+          <p class="mainText">
             будем счастливы встретить вас к началу банкета в <strong>16:30</strong> – ваш теплый прием в этот час будет для нас равноценной радостью.
           </p>
-          <p>
+          <p class="mainText">
             Пожалуйста, дайте нам знать о вашем предполагаемом времени прибытия, чтобы мы могли все предусмотреть (контакты ниже).
           </p>
       </div>
-      <img src="" alt="">
+      <img src="vetko.png" alt="ветка оливы" class="olive" style= "transform: scaleX(-1)">
     </section>
     <section class="ivitation">
       <div class="dirtyGreenBlock">
-
+        <h3>ПРИГЛАШЕНИЕ</h3>
+        <p class="green-shedule">— 15:30 — <br>фуршет</p>
+        <p class="green-shedule">— 16:00 — <br>Выездная регистрация</p>
+        <p class="green-shedule">— 17:00 — <br>Банкет</p>
+        <p class="green-shedule">— 23:00 — <br>Окончание мероприятия</p>
+        <h2>9 АВГУСТА</h2>
       </div>
-      <img src="" alt="">
+      <img src="pic10.jpg" alt="" id="pic10">
       <div class="invitationLastText">
-
+        <p class="mainText">А теперь — сохраните это чувство светлого ожидания.</p>
+        <p class="mainText">До встречи 9 августа в «Дубраве», где каждая деталь будет говорить о любви.</p>
+        <p class="mainText">Добро пожаловать в начало нашей вечности.</p>
+        <p class="mainText">Ждём вас с открытым сердцем,</p>
+        <h3>Григорий и Наталья</h3>
       </div>
       <div class="InvitationPicBlock">
-        <img src="" alt="">
-        <img src="" alt="">
+        <img src="pic11.jpg" alt="" id="pic11">
+        <img src="pic12.jpg" alt="" id="pic12">
       </div>
     </section>
     <footer>
-      <img src="" alt="">
+      <img src="GN-logo.png" alt="" id="gn-logo">
       <form action="">
-
+        <input type="text" name="name" id="" placeholder="Ваше имя">
+        <input type="text" name="telegram" id="" placeholder="Ваш телеграм">
+        <input type="tel" name="telephone" id="" placeholder="Ваш телефон">
+        <input type="text" name="allergy" id="" placeholder="Есть ли у вас аллергия">
+        <button type="submit">я приду!</button>
       </form>
-      <img src="" alt="" class="qr-cat">
+      <img src="qr-cat.jpg" alt="" class="qr-cat">
       <p class="contacts">
         Свяжитесь с нами по всем вопросам:
         Наталья +79967469845
         Григорий +7 917 160 8515
       </p>
-      <img src="" alt="">
-
+      <img src="pic13.jpg" alt="" id="pic13">
     </footer>
 
   </body>
