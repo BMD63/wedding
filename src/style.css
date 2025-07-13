@@ -65,7 +65,8 @@ transform: translateX(-50%);
 }
 .firstIntroBlock{
   background-color: rgba(143, 169, 140, 0.25);
-  border-radius: 150vw 150vw 0 0 
+  border-radius: 150vw 150vw 0 0;
+  padding-top: 2vw;
 }
 .love-elegance{
   list-style: none;
