@@ -16,10 +16,14 @@
 
 :root {
   font-family: cinzel, serif;
-  font-size: 4.6vw;
+  font-size: 5.8vw;
   line-height: 10.2vw;
   font-weight: 400;
   text-align: center;
+}
+:root p {
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 header{
   width: 100%;
@@ -98,7 +102,7 @@ transform: translateX(-50%);
   position: relative;
   width: 100%;
   height: 105vw;
-  background-color: #8fa98c;
+  background-color: rgba(143, 169, 140, 0.25);
 }
 
 .colors-block{
@@ -130,27 +134,39 @@ transform: translateX(-50%);
 #color6{
   background: #8FA98C;
 }
-.rules h3{
+.rules h3, .details h3{
   font-family: anastasia;
-  font-size: 11.8vw;
+  font-size: 10.8vw;
   font-weight: 400;
 }
 .rulesPicBlock{
   position: relative;
   width: 100%;
   height: 110vw;
-  background-color: #8fa98c;
+  background-color: rgba(143, 169, 140, 0.25);
 }
 .rulesPicBlock img{
   width: 42% !important;
+}
+.details p{
+  font-size: 4.6vw;
+}
+.dirtyGreenBlock{
+  color: #FAF7F4;
+  padding-bottom: 16vw ;
+  height: auto;
+  background-color: #8fa98c;
+}
+.dirtyGreenBlock p:last-child{
+  margin-bottom: 0;
 }
 .InvitationPicBlock{
   position: relative;
   width: 100%;
   height: 110vw;
-  background-color: #8fa98c;
-
+  background-color: rgba(143, 169, 140, 0.25);
 }
+
 
 .olive{
   width: 25vw;
