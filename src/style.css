@@ -164,7 +164,7 @@ transform: translateX(-50%);
 .InvitationPicBlock{
   position: relative;
   width: 100%;
-  height: 110vw;
+  height: 150vw;
   background-color: rgba(143, 169, 140, 0.25);
 }
 
